@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRE G – Falegnameria Artigianale</title>
+
+  <!-- Font moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Foglio di stile esterno -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="hero-bg" id="home">
+    <header>
+      <div class="header-inner">
+     <nav class="navbar">
+    <div class="logo-container">
+      <img src="Immagini/Loghi/Logo C no BG.PNG" alt="TRE G Logo" class="logo-img">
+      <span class="logo-text">TRE G</span>
+    </div>
+   <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#galleria">Galleria</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+            <li>
+              <button class="btn-nav" onclick="document.getElementById('consulenza').scrollIntoView({behavior: 'smooth'})">
+                Prenota consulenza
+              </button>
+            </li>
+          </ul>
+  </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero-content">
+        <div>
+          <div class="hero-tag">
+            <span></span> FALEGNAMERIA SU MISURA A CONDUZIONE FAMILIARE
+          </div>
+
+          <h1 class="hero-title">
+            Falegnameria TRE G 
+            <span>50 anni di esperienza nella lavorazione del legno</span>.
+          </h1>
+
+          <p class="hero-subtitle">
+            Progettiamo, realizziamo e restauriamo elementi d’arredo e serramenti
+            in legno per case, negozi e studi professionali. Uniamo la precisione
+            artigianale a soluzioni contemporanee, pensate per durare nel tempo.
+          </p>
+
+          <p class="hero-history">
+            Nata come piccola bottega di quartiere, TRE G è oggi una falegnameria
+            di riferimento per lavori su misura, restauro e ristrutturazioni in legno.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#consulenza" class="btn-primary">
+              Prenota una consulenza telefonica
+            </a>
+            <a href="#galleria" class="btn-secondary">
+              Guarda i nostri lavori
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="badge"><strong>50</strong> anni di esperienza</div>
+            <div class="badge"><strong>Su misura</strong> per ogni spazio</div>
+            <div class="badge"><strong>Restauro</strong> di porte, persiane, finestre</div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div>
+            <div class="hero-card-title">Lavorazioni in falegnameria</div>
+            <div class="hero-card-highlight">Legno, precisione e dettagli.</div>
+            <div class="hero-card-sub">
+              Dalla progettazione alla posa finale, seguiamo ogni fase del tuo progetto.
+            </div>
+          </div>
+
+          <div class="hero-services">
+            <div class="hero-services-item">
+              <span>●</span>
+              <div>
+                <strong>Lavori su misura</strong><br />
+                Cucine, bagni, mobili contenitori, scaffalature e armadi progettati sulle misure reali del tuo ambiente.
+              </div>
+            </div>
+            <div class="hero-services-item">
+              <span>●</span>
+              <div>
+                <strong>Restauro & ristrutturazione</strong><br />
+                Recuperiamo porte, persiane, finestre e arredi esistenti, ridando vita al legno e migliorandone la funzionalità.
+              </div>
+            </div>
+            <div class="hero-services-item">
+              <span>●</span>
+              <div>
+                <strong>Serramenti e chiusure</strong><br />
+                Interventi su infissi in legno per migliorare isolamento, estetica e sicurezza.
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-mini">
+            <div>
+              <span>Su misura</span>
+              Progetti personalizzati
+            </div>
+            <div>
+              <span>Materiali selezionati</span>
+              Essenze di qualità
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <!-- SERVIZI -->
+  <section id="servizi">
+    <div class="section-inner">
+      <h2 class="section-title">Cosa realizziamo</h2>
+      <p class="section-subtitle">
+        Soluzioni in legno su misura per ogni ambiente: dalla ristrutturazione di serramenti
+        alla realizzazione di arredi completi per cucina, bagno, zona giorno e comfort.
+      </p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">🪵</div>
+          <h3 class="service-title">Lavori su misura</h3>
+          <p class="service-desc">
+            Progettiamo e costruiamo mobili su misura, adattando forme e finiture
+            allo stile della tua casa: cucine, bagni, pareti attrezzate, mensole,
+            scaffali e armadi.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Cucine e bagni</span>
+            <span class="service-tag">Armadi e cabine</span>
+            <span class="service-tag">Scaffali e librerie</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🪚</div>
+          <h3 class="service-title">Restauro e ristrutturazione</h3>
+          <p class="service-desc">
+            Interveniamo su porte, persiane, finestre e mobili in legno già esistenti.
+            Ripristiniamo, rinforziamo e rinnoviamo le superfici rispettando il carattere originale.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Porte interne</span>
+            <span class="service-tag">Persiane e scuri</span>
+            <span class="service-tag">Finestre in legno</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">📐</div>
+          <h3 class="service-title">Arredi per cucina e bagno</h3>
+          <p class="service-desc">
+            Soluzioni funzionali, resistenti e personalizzate per cucine e bagni:
+            basi, pensili, top, mobili lavello e colonne su misura.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Progettazione</span>
+            <span class="service-tag">Posa in opera</span>
+            <span class="service-tag">Finiture su richiesta</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🏡</div>
+          <h3 class="service-title">Scaffali, armadi e contenitori</h3>
+          <p class="service-desc">
+            Organizziamo gli spazi con soluzioni studiate sulle tue esigenze:
+            armadi a muro, boiserie, scaffali per zona giorno, uffici e negozi.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Soluzioni salvaspazio</span>
+            <span class="service-tag">Design coordinato</span>
+            <span class="service-tag">Progetti 3D su richiesta</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERIA -->
+  <section id="galleria">
+    <div class="section-inner">
+      <h2 class="section-title">Galleria lavori</h2>
+      <p class="section-subtitle">
+        Alcuni esempi dei nostri interventi su misura: ristrutturazioni, cucine,
+        mobili per bagno, scaffalature e serramenti in legno.
+      </p>
+
+      <div class="gallery-grid">
+        <!-- Sostituisci le immagini con le tue foto -->
+        <div class="gallery-item">
+          <img src="Immagini/Galleria/Copertine/Cucina in legno senza testo.png" alt="Cucina su misura in legno" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Cucina su misura</div>
+            <div class="gallery-type">Piani di lavoro, basi e pensili coordinati</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="Immagini/Galleria/Copertine/Mobile bagno in legno senza testo.png" alt="Mobile bagno in legno" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Mobili per bagno</div>
+            <div class="gallery-type">Soluzioni resistenti all'umidità, coordinate con la stanza</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="Immagini/Galleria/Copertine/Restauro porte interne senza testo.png" alt="Restauro di porte interne" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Restauro porte e persiane</div>
+            <div class="gallery-type">Recupero di serramenti in legno esistenti</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="Immagini/Galleria/Copertine/Armadio senza testo.png" alt="Armadio su misura" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Armadi e scaffali</div>
+            <div class="gallery-type">Soluzioni salvaspazio per camere e living</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI + CONSULENZA -->
+  <section id="contatti">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">Contatti</h2>
+          <p class="section-subtitle">
+            Raccontaci il tuo progetto: possiamo aiutarti nella scelta dei materiali,
+            nella riorganizzazione degli spazi e nel recupero di elementi esistenti in legno.
+          </p>
+
+          <h3>Dati di contatto</h3>
+          <ul class="contact-list">
+            <li><span class="contact-label">Azienda:</span> Falegnameria TRE G di Genuario Mario</li>
+            <li><span class="contact-label">Telefono:</span> +39 338 413 8898</li>
+            <li><span class="contact-label">Email:</span> genuariomario@libero.it</li>
+            <li><span class="contact-label">Indirizzo:</span> Via Ludovico Muratori 11, Milano</li>
+            <li><span class="contact-label">Orari:</span> Lun–Ven 8:00–12:00 / 14:00–18:00</li>
+          </ul>
+
+          <span class="contact-highlight">Oltre 50 anni di esperienza nel legno</span>
+
+          <div class="contact-history">
+            TRE G nasce come falegnameria artigianale a conduzione familiare.
+            Oggi continua a realizzare e restaurare arredi e serramenti, mantenendo la stessa
+            cura per i dettagli, la scelta del legno e le finiture di una volta.
+          </div>
+        </div>
+
+        <div id="consulenza" class="consult-form-container">
+          <h3 class="consult-form-title">Prenota una consulenza telefonica</h3>
+          <p class="consult-form-sub">
+            Compila il modulo: ti ricontatteremo per programmare una telefonata dedicata
+            al tuo progetto o intervento di restauro.
+          </p>
+
+          <form action="#" method="post">
+            <div class="form-row">
+              <div>
+                <label for="nome">Nome e cognome</label>
+                <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required />
+              </div>
+              <div>
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Inserisci il tuo numero" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Indirizzo email (facoltativo)" />
+              </div>
+              <div>
+                <label for="fascia-oraria">Fascia oraria preferita</label>
+                <select id="fascia-oraria" name="fascia-oraria">
+                  <option value="">Seleziona una fascia</option>
+                  <option value="mattina">Mattina (8:00–12:00)</option>
+                  <option value="pomeriggio">Pomeriggio (14:00–18:00)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="tipo-progetto">Tipo di lavoro</label>
+              <select id="tipo-progetto" name="tipo-progetto">
+                <option value="">Seleziona una voce</option>
+                <option value="su-misura">Lavori su misura (cucine, bagni, mobili)</option>
+                <option value="restauro-serramenti">Restauro porte, persiane, finestre</option>
+                <option value="scaffali-armadi">Scaffali, armadi, armadi a muro</option>
+                <option value="altro">Altro / Da valutare insieme</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="messaggio">Descrivi brevemente il tuo progetto</label>
+              <textarea id="messaggio" name="messaggio" placeholder="Indica misure indicative, ambiente e tipo di intervento desiderato"></textarea>
+              <div class="form-note">
+                Non è necessario inserire tutti i dettagli: ci penseremo insieme durante la telefonata.
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">
+              Invia richiesta di consulenza
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>© Falegnameria TRE G di Genuario Mario. Tutti i diritti riservati.</span>
+      <span>Legno, esperienza e progetti su misura dal 1976.</span>
+    </div>
+  </footer>
+
+  <!-- Script esterno -->
+  <script src="script.js"></script>
+</body>
+</html>
