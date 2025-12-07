@@ -1,12 +1,37 @@
 :root {
-  --bg-dark: #101010;
-  --bg-darker: #070707;
-  --green: #063A2C;
-  --wood: #8d6e63;
-  --text-light: #f5f5f5;
-  --text-muted: #cccccc;
-  --accent: #a1887f;
-  --hero-title-color: #8d6e63; /* Cambi colore titolo qui! */
+  /* 🎨 PALETTE PRINCIPALE TRE G */
+
+  /* Verde ufficiale del logo */
+  --color-primary: #063A2C;        /* VERDE TRE G – FORESTA PROFONDA */
+
+  /* Variante verde più chiara (per hover, bottoni, ecc.) */
+  --color-primary-light: #2E7D32;
+
+  /* Toni legno / caldo */
+  --color-accent-wood: #8D6E63;
+  --color-accent-warm: #A1887F;
+
+  /* Sfondo e testi */
+  --color-bg-main: #101010;
+  --color-bg-alt: #070707;
+  --color-text-main: #F5F5F5;
+  --color-text-muted: #CCCCCC;
+
+  /* Bordi e linee sottili */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* 🔠 Colori logici per elementi del sito */
+  --hero-title-color: var(--color-text-main);
+  --contact-highlight-color: var(--color-primary);
+
+  /* 🔁 Vecchie variabili che il CSS usa già (compatibilità) */
+  --bg-dark: var(--color-bg-main);
+  --bg-darker: var(--color-bg-alt);
+  --green: var(--color-primary);
+  --wood: var(--color-accent-wood);
+  --text-light: var(--color-text-main);
+  --text-muted: var(--color-text-muted);
+  --accent: var(--color-accent-warm);
 }
 
 * {
@@ -667,6 +692,119 @@ form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
+}
+
+/* ===========================
+   MODALE GALLERIA ALBUM
+   =========================== */
+
+.album-modal {
+  position: fixed;
+  inset: 0;
+  display: none;                 /* nascosto di default */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.album-modal.show {
+  display: flex;
+}
+
+.album-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.album-modal-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  width: 90%;
+  background: #111111;
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem 1rem;
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+}
+
+.album-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.album-modal-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.album-modal-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#album-modal-image {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #000;
+}
+
+.album-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-prev {
+  left: 8px;
+}
+
+.album-next {
+  right: 8px;
+}
+
+.album-modal-counter {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* versione mobile */
+@media (max-width: 600px) {
+  .album-modal-content {
+    padding: 0.9rem 0.8rem 0.8rem;
+    width: 94%;
+  }
+
+  .album-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {

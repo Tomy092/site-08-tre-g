@@ -101,7 +101,7 @@
             <div class="hero-services-item">
               <span>●</span>
               <div>
-                <strong>Restauro & ristrutturazione</strong><br />
+                <strong>Restauro e ristrutturazione</strong><br />
                 Recuperiamo porte, persiane, finestre e arredi esistenti, ridando vita al legno e migliorandone la funzionalità.
               </div>
             </div>
@@ -140,7 +140,6 @@
 
       <div class="services-grid">
         <article class="service-card">
-          <div class="service-icon">🪵</div>
           <h3 class="service-title">Lavori su misura</h3>
           <p class="service-desc">
             Progettiamo e costruiamo mobili su misura, adattando forme e finiture
@@ -155,7 +154,6 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">🪚</div>
           <h3 class="service-title">Restauro e ristrutturazione</h3>
           <p class="service-desc">
             Interveniamo su porte, persiane, finestre e mobili in legno già esistenti.
@@ -169,7 +167,6 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">📐</div>
           <h3 class="service-title">Arredi per cucina e bagno</h3>
           <p class="service-desc">
             Soluzioni funzionali, resistenti e personalizzate per cucine e bagni:
@@ -183,7 +180,6 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">🏡</div>
           <h3 class="service-title">Scaffali, armadi e contenitori</h3>
           <p class="service-desc">
             Organizziamo gli spazi con soluzioni studiate sulle tue esigenze:
@@ -200,50 +196,54 @@
   </section>
 
   <!-- GALLERIA -->
-  <section id="galleria">
-    <div class="section-inner">
-      <h2 class="section-title">Galleria lavori</h2>
-      <p class="section-subtitle">
-        Alcuni esempi dei nostri interventi su misura: ristrutturazioni, cucine,
-        mobili per bagno, scaffalature e serramenti in legno.
-      </p>
+<section id="galleria">
+  <div class="section-inner">
+    <h2 class="section-title">Galleria lavori</h2>
+    <p class="section-subtitle">
+      Alcuni esempi dei nostri interventi su misura: ristrutturazioni, cucine,
+      mobili per bagno, scaffalature e serramenti in legno.
+    </p>
 
-      <div class="gallery-grid">
-        <!-- Sostituisci le immagini con le tue foto -->
-        <div class="gallery-item">
-          <img src="Immagini/Galleria/Copertine/Cucina in legno senza testo.png" alt="Cucina su misura in legno" />
-          <div class="gallery-overlay">
-            <div class="gallery-title">Cucina su misura</div>
-            <div class="gallery-type">Piani di lavoro, basi e pensili coordinati</div>
-          </div>
+    <!-- Sostituisci le immagini con le tue foto -->
+    <div class="gallery-grid">
+      <!-- Album 1: Cucine su misura -->
+      <div class="gallery-item" data-album="cucina">
+        <img src="Immagini/Galleria/Copertine/Cucina in legno senza testo.png" alt="Cucina su misura in legno" />
+        <div class="gallery-overlay">
+          <div class="gallery-title">Cucine su misura</div>
+          <div class="gallery-type">Piani di lavoro, basi e pensili coordinati</div>
         </div>
+      </div>
 
-        <div class="gallery-item">
-          <img src="Immagini/Galleria/Copertine/Mobile bagno in legno senza testo.png" alt="Mobile bagno in legno" />
-          <div class="gallery-overlay">
-            <div class="gallery-title">Mobili per bagno</div>
-            <div class="gallery-type">Soluzioni resistenti all'umidità, coordinate con la stanza</div>
-          </div>
+      <!-- Album 2: Bagni in legno -->
+      <div class="gallery-item" data-album="bagno">
+        <img src="Immagini/Galleria/Copertine/Mobile bagno in legno senza testo.png" alt="Mobile bagno in legno" />
+        <div class="gallery-overlay">
+          <div class="gallery-title">Mobili per bagno</div>
+          <div class="gallery-type">Soluzioni resistenti all'umidità, coordinate con la stanza</div>
         </div>
+      </div>
 
-        <div class="gallery-item">
-          <img src="Immagini/Galleria/Copertine/Restauro porte interne senza testo.png" alt="Restauro di porte interne" />
-          <div class="gallery-overlay">
-            <div class="gallery-title">Restauro porte e persiane</div>
-            <div class="gallery-type">Recupero di serramenti in legno esistenti</div>
-          </div>
+      <!-- Album 3: Restauro porte -->
+      <div class="gallery-item" data-album="porte">
+        <img src="Immagini/Galleria/Copertine/Restauro porte interne senza testo.png" alt="Restauro di porte interne" />
+        <div class="gallery-overlay">
+          <div class="gallery-title">Restauro porte e persiane</div>
+          <div class="gallery-type">Recupero di serramenti in legno esistenti</div>
         </div>
+      </div>
 
-        <div class="gallery-item">
-          <img src="Immagini/Galleria/Copertine/Armadio senza testo.png" alt="Armadio su misura" />
-          <div class="gallery-overlay">
-            <div class="gallery-title">Armadi e scaffali</div>
-            <div class="gallery-type">Soluzioni salvaspazio per camere e living</div>
-          </div>
+      <!-- Album 4: Armadi su misura -->
+      <div class="gallery-item" data-album="armadio">
+        <img src="Immagini/Galleria/Copertine/Armadio senza testo.png" alt="Armadio su misura" />
+        <div class="gallery-overlay">
+          <div class="gallery-title">Armadi e scaffali</div>
+          <div class="gallery-type">Soluzioni salvaspazio per camere e living</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CONTATTI + CONSULENZA -->
   <section id="contatti">
@@ -335,6 +335,27 @@
       </div>
     </div>
   </section>
+
+    <!-- MODALE ALBUM GALLERIA -->
+  <div id="album-modal" class="album-modal" aria-hidden="true">
+    <div class="album-modal-backdrop" id="album-modal-backdrop"></div>
+
+    <div class="album-modal-content" role="dialog" aria-modal="true">
+      <button class="album-close" id="album-close" aria-label="Chiudi galleria">&times;</button>
+
+      <h3 class="album-modal-title" id="album-modal-title">Titolo album</h3>
+
+      <div class="album-modal-image-wrapper">
+        <button class="album-nav album-prev" id="album-prev" aria-label="Immagine precedente">&#10094;</button>
+
+        <img id="album-modal-image" src="Immagini/Galleria/Copertine/Mobile bagno in legno con testo.png" alt="Immagine album TRE G" />
+
+        <button class="album-nav album-next" id="album-next" aria-label="Immagine successiva">&#10095;</button>
+      </div>
+
+      <p class="album-modal-counter" id="album-modal-counter">1 / 1</p>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
