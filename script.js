@@ -29,8 +29,8 @@ const albums = {
     // aggiungi altre...
   ],
   bagno: [
-    "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-1noBG.webp",
-    "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-2noBG.webp",
+    "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-1.webp",
+    "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-2.webp",
     "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-3.webp",
     "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-4.webp",
     "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-5.webp",
