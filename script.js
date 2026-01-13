@@ -29,12 +29,12 @@ const albums = {
     "Immagini/Galleria/Lavori/Cucine su misura/Cucina-3.webp"
   ],
   bagno: [
-    "Immagini/Galleria/Lavori/mobili-per-bagno/Bagno-1.webp",
-    "Immagini/Galleria/Lavori/mobili-per-bagno/Bagno-2.webp",
-    "Immagini/Galleria/Lavori/mobili-per-bagno/Bagno-3.webp",
-    "Immagini/Galleria/Lavori/mobili-per-bagno/Bagno-4.webp",
-    "Immagini/Galleria/Lavori/mobili-per-bagno/Bagno-5.webp",
-    "Immagini/Galleria/Lavori/mobili-per-bagno/Bagno-6.webp"
+    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-1.webp",
+    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-2.webp",
+    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-3.webp",
+    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-4.webp",
+    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-5.webp",
+    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-6.webp"
   ],
   porte: [
     "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-1.webp",
