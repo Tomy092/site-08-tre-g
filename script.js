@@ -21,12 +21,12 @@ if (menuToggle && navLinks) {
    =========================== */
 
 // QUI inserisci tutte le immagini che vuoi per ogni album
+// ✅ QUI METTI TUTTE LE IMMAGINI (percorsi con /, non \)
 const albums = {
   cucina: [
     "Immagini/Galleria/Lavori/Cucine su misura/Cucina-1.webp",
     "Immagini/Galleria/Lavori/Cucine su misura/Cucina-2.webp",
     "Immagini/Galleria/Lavori/Cucine su misura/Cucina-3.webp"
-    // aggiungi altre...
   ],
   bagno: [
     "Immagini/Galleria/Lavori/mobili-per-bagno/bagno-1.webp",
@@ -64,7 +64,6 @@ const albums = {
     "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-14.webp"
   ]
 };
-
 // Titoli leggibili per ogni album
 const albumTitles = {
   cucina: "Cucine su misura in legno",
