@@ -24,44 +24,54 @@ if (menuToggle && navLinks) {
 // ✅ QUI METTI TUTTE LE IMMAGINI (percorsi con /, non \)
 const albums = {
   cucina: [
-    "Immagini/Galleria/Lavori/Cucine su misura/Cucina-1.webp",
-    "Immagini/Galleria/Lavori/Cucine su misura/Cucina-2.webp",
-    "Immagini/Galleria/Lavori/Cucine su misura/Cucina-3.webp"
+    "immagini/galleria/lavori/cucine-su-misura/cucina-(1).webp",
+    "immagini/galleria/lavori/cucine-su-misura/cucina-(2).webp",
+    "immagini/galleria/lavori/cucine-su-misura/cucina-(3).webp",
+    "immagini/galleria/lavori/cucine-su-misura/cucina-(4).webp"
   ],
   bagno: [
-    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-1.webp",
-    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-2.webp",
-    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-3.webp",
-    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-4.webp",
-    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-5.webp",
-    "Immagini/Galleria/Lavori/Mobili per bagno/Bagno-6.webp"
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(1).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(2).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(3).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(4).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(5).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(6).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(7).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(8).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(9).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(10).webp",
+    "immagini/galleria/lavori/mobili-per-bagno/bagno-(11).webp"
   ],
   porte: [
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-1.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-2.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-3.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-4.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-5.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-6.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-7.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-8.webp",
-    "Immagini/Galleria/Lavori/Restauro porte e persiane/Porte-persiane-9.webp"
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(1).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(2).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(3).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(4).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(5).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(6).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(7).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(8).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(9).webp",
+    "immagini/galleria/lavori/restauro-porte-e-finestre/porte-persiane-(10).webp"
   ],
   armadio: [
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-1.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-2.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-3.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-4.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-5.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-6.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-7.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-8.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-9.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-10.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-11.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-12.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-13.webp",
-    "Immagini/Galleria/Lavori/Armadi e scaffali/Armadio-14.webp"
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(1).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(2).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(3).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(4).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(5).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(6).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(7).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(8).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(9).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(10).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(11).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(12).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(13).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(14).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(15).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(16).webp",
+    "immagini/galleria/lavori/armadi-e-scaffali/armadio-(17).webp"
   ]
 };
 // Titoli leggibili per ogni album
@@ -149,5 +159,19 @@ if (btnNext) {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("show")) {
     closeAlbum();
+  }
+});
+
+/* ===========================
+   NAVBAR SCROLL EFFECT
+   =========================== */
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
   }
 });
