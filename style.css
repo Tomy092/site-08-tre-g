@@ -80,6 +80,13 @@ body {
   background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll; /* 🔥 FIX MOBILE */
+  }
+}
+
+
 /* ===========================
    HEADER + NAVBAR (FIXED)
    =========================== */
@@ -119,7 +126,9 @@ header {
 .navbar.hidden {
   opacity: 0;
   pointer-events: none;
+  transform: translateY(-100%);
 }
+
 
 /* =========================
    LOGO – SIMBOLO + SCRITTA
@@ -925,23 +934,28 @@ textarea {
 
 .album-modal-image-wrapper {
   position: relative;
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 0;
+
+  width: 100%;
+  height: 65vh;            /* ✅ dimensione desktop stabile */
+  max-height: 700px;       /* ✅ limite elegante */
 }
 
 
 #album-modal-image {
+  width: auto;
+  height: 100%;
+
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 100%;
+
   object-fit: contain;
   border-radius: 12px;
   background: #000;
   display: block;
 }
-
 
 .album-nav {
   position: absolute;
@@ -1141,4 +1155,17 @@ footer {
       #101010,
       #0b0b0b
     );
+}
+
+@media (max-width: 768px) {
+  .album-modal-image-wrapper {
+    height: calc(100vh - 220px); /* spazio per titolo + controlli */
+    max-height: none;
+  }
+
+  #album-modal-image {
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+  }
 }
