@@ -59,11 +59,11 @@ body {
 .hero-bg {
   min-height: 100vh;
   background-image:
-    /* OVERLAY (NON TOCCARE) */
+    /* AY (NON TOCCARE) */
     linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.2) 0%,
-      rgba(6, 58, 44, 0.25) 35%,
+      rgba(0, 0, 0, 0.25) 35%,
       rgba(0, 0, 0, 0.75) 75%,
       rgba(0, 0, 0, 0.9) 100%
     ),
@@ -112,97 +112,73 @@ header {
   z-index: 9999;
 }
 
-/* LOGO */
+/* =========================
+   LOGO – SIMBOLO + SCRITTA
+   ========================= */
+
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-.logo-img {
-  width: 48px;
-  height: 48px;
+/* 🎯 SIMBOLO LOGO (vetta alberi) */
+.logo-symbol {
+  height: 48px;       /* ← modifica SOLO questo per il simbolo */
+  width: auto;
   object-fit: contain;
 
-  /* 🌳 TRASFORMAZIONE IN LEGNO */
+  /* 🌳 effetto legno */
   filter:
     sepia(0.35)
     saturate(1.25)
     hue-rotate(-18deg)
     brightness(0.92)
-    contrast(1.15);
-
-  /* incisione + profondità */
-  filter:
+    contrast(1.15)
     drop-shadow(0 1px 1px rgba(0, 0, 0, 0.45))
-    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35))
-    sepia(0.35)
-    saturate(1.25)
-    hue-rotate(-18deg)
-    brightness(0.92)
-    contrast(1.15);
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
 
   transition:
     filter 0.4s ease,
     transform 0.3s ease;
 }
 
-.logo-container:hover .logo-img {
+/* ✍️ SCRITTA LOGO (TRE G) */
+.logo-wordmark {
+  height: 36px;       /* ← modifica SOLO questo per la scritta */
+  width: auto;
+  object-fit: contain;
+
+  /* stesso effetto legno del simbolo */
   filter:
-    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.6))
-    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.45))
+    sepia(0.35)
+    saturate(1.25)
+    hue-rotate(-18deg)
+    brightness(0.92)
+    contrast(1.15)
+    drop-shadow(0 1px 1px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+
+  transition:
+    filter 0.4s ease,
+    transform 0.3s ease;
+}
+
+/* ✨ HOVER UNIFICATO */
+.logo-container:hover .logo-symbol,
+.logo-container:hover .logo-wordmark {
+  filter:
     sepia(0.45)
     saturate(1.35)
     hue-rotate(-12deg)
     brightness(1)
-    contrast(1.2);
+    contrast(1.2)
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.45));
 
   transform: translateY(-1px);
 }
 
-
-
-.logo-text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 1.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-
-  /* 🎨 EFFETTO LEGNO */
-  background: linear-gradient(
-    135deg,
-    #a1887f 0%,
-    #8d6e63 25%,
-    #7a5a4f 50%,
-    #8d6e63 75%,
-    #a1887f 100%
-  );
-
-  /* ✅ STANDARD + WEBKIT (NO WARNING) */
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  /* necessario per Chrome / Safari */
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-
-  /* 🌳 profondità / incisione */
-  text-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.45),
-    0 2px 4px rgba(0, 0, 0, 0.35);
-
-  transition:
-    background-position 0.6s ease,
-    text-shadow 0.3s ease;
-}
-
-.logo-container:hover .logo-text {
-  background-position: 100% 50%;
-  text-shadow:
-    0 2px 2px rgba(0, 0, 0, 0.6),
-    0 4px 8px rgba(0, 0, 0, 0.45);
-}
 
 /* NAV LINKS (nel tuo HTML è #nav-links) */
 #nav-links {
@@ -551,6 +527,20 @@ section {
 /* ===========================
    SERVIZI
    =========================== */
+#servizi {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(46, 125, 50, 0.10),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #101010,
+      #0b0b0b
+    );
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -558,7 +548,12 @@ section {
 }
 
 .service-card {
-  background: linear-gradient(135deg, #151515, #120e0b);
+  background: linear-gradient(
+    135deg,
+    #151515,
+    #0f0f0f
+  );
+
   border-radius: 16px;
   padding: 1.2rem 1.2rem 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -572,7 +567,7 @@ section {
   inset: 0;
   background: radial-gradient(
     circle at top left,
-    rgba(46, 125, 50, 0.16),
+    rgba(15, 15, 15, 0.9),
     transparent 50%
   );
   opacity: 0.8;
@@ -610,9 +605,19 @@ section {
    GALLERIA
    =========================== */
 #galleria {
-  background: radial-gradient(circle at top, rgba(46, 125, 50, 0.25), transparent 50%),
-    var(--bg-darker);
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(46, 125, 50, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #101010,
+      #0b0b0b
+    );
 }
+
 
 .gallery-grid {
   display: grid;
@@ -667,6 +672,7 @@ section {
   color: #fff;
   opacity: 0;
   transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
 .gallery-item:hover {
@@ -902,17 +908,19 @@ textarea {
 
 .album-modal-image-wrapper {
   position: relative;
+  width: 100%;
+  max-height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+
 #album-modal-image {
-  max-width: 100%;
-  max-height: 60vh;
+  width: 100%;
+  max-height: calc(100vh - 180px); /* spazio per navbar + titolo */
   object-fit: contain;
-  border-radius: 12px;
-  background: #000;
+  display: block;
 }
 
 .album-nav {
@@ -959,6 +967,18 @@ textarea {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .album-modal-content {
+    max-height: 90vh;
+    overflow: hidden;
+  }
+
+  #album-modal-image {
+    max-height: calc(100vh - 220px);
+  }
+}
+
 
 /* ===========================
    FOOTER
