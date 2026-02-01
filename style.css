@@ -1205,3 +1205,42 @@ footer {
     display: none !important;
   }
 }
+
+/* ===========================
+   GALLERY TITLES – MOBILE FIX
+   =========================== */
+
+@media (max-width: 768px) {
+  .gallery-overlay {
+    opacity: 1 !important;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.45),
+      transparent
+    );
+  }
+
+  .gallery-item::after {
+    opacity: 1;
+  }
+
+  .gallery-item {
+    transform: none !important;
+  }
+
+  .gallery-item img {
+    transform: none !important;
+    filter: saturate(1) contrast(1.05);
+  }
+
+  .gallery-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .gallery-type {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
