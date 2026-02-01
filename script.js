@@ -130,6 +130,39 @@ document.addEventListener("DOMContentLoaded", () => {
     modalCounter.textContent = `${currentIndex + 1} / ${images.length}`;
   }
 
+  /* ===========================
+   SWIPE MOBILE / TABLET
+   =========================== */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  // soglia minima per evitare tocchi accidentali
+  if (Math.abs(swipeDistance) < 50) return;
+
+  if (swipeDistance < 0) {
+    // swipe sinistra → avanti
+    currentIndex++;
+  } else {
+    // swipe destra → indietro
+    currentIndex--;
+  }
+
+  updateModalImage();
+}
+
+modal.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+modal.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
   document.querySelectorAll(".gallery-item").forEach((item) => {
     item.addEventListener("click", () => {
       const key = item.dataset.album;
