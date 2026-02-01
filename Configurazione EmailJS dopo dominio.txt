@@ -1,0 +1,231 @@
+Perfetto 👍
+qui andiamo puliti, ordinati e professionali, così:
+
+✉️ Email che ricevi tu (richiesta informazioni)
+
+🤝 Auto-reply al cliente
+
+⚙️ Configurazione completa EmailJS
+
+💻 Codice da inserire in VS Code
+
+🎨 Stile coerente con il sito TRE G (linguaggio + tono)
+
+Useremo UN SOLO account EmailJS → puoi gestire più siti senza problemi.
+
+1️⃣ STRUTTURA CONSIGLIATA (IMPORTANTE)
+
+👉 Un solo servizio EmailJS (service_id)
+👉 2 template diversi:
+
+tre_g_richiesta_info → mail che arriva a TE
+
+tre_g_autoreply → risposta automatica al cliente
+
+Questo è best practice.
+
+2️⃣ CONFIGURAZIONE EMAILJS (STEP-BY-STEP)
+🔹 A. Email Service
+
+In EmailJS → Email Services
+
+Provider: Gmail / Outlook / Aruba (quello che usi)
+
+Nome servizio:
+👉 service_treg_mail
+
+📌 Userai lo stesso service anche per altri siti, se vuoi.
+
+🔹 B. TEMPLATE 1 – MAIL CHE RICEVI TU
+Nome template
+
+👉 tre_g_richiesta_info
+
+Subject
+Nuova richiesta informazioni – {{nome}}
+
+Contenuto HTML (COPIA/INCOLLA)
+<div style="font-family: Montserrat, Arial, sans-serif; background:#0b0b0b; color:#f5f5f5; padding:24px;">
+  <div style="max-width:640px; margin:auto; background:#111; border-radius:16px; padding:24px; border:1px solid rgba(255,255,255,0.08);">
+
+    <h2 style="margin:0 0 12px; color:#a1887f; letter-spacing:0.12em; text-transform:uppercase;">
+      Nuova richiesta informazioni
+    </h2>
+
+    <p style="color:#ccc; font-size:14px; margin-bottom:20px;">
+      Hai ricevuto una nuova richiesta dal sito <strong>TRE G – Falegnameria Artigianale</strong>.
+    </p>
+
+    <table style="width:100%; font-size:14px; border-collapse:collapse;">
+      <tr>
+        <td style="padding:8px 0; color:#a1887f;">Nome</td>
+        <td style="padding:8px 0;">{{nome}}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; color:#a1887f;">Telefono</td>
+        <td style="padding:8px 0;">{{telefono}}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; color:#a1887f;">Email</td>
+        <td style="padding:8px 0;">{{email}}</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; color:#a1887f;">Tipo lavoro</td>
+        <td style="padding:8px 0;">{{tipo_progetto}}</td>
+      </tr>
+    </table>
+
+    <div style="margin-top:20px; padding:16px; background:#161616; border-radius:12px;">
+      <p style="margin:0 0 6px; color:#a1887f;">Messaggio</p>
+      <p style="margin:0; font-size:14px; color:#f5f5f5;">
+        {{messaggio}}
+      </p>
+    </div>
+
+    <p style="margin-top:24px; font-size:12px; color:#888;">
+      Inviata automaticamente dal sito TRE G
+    </p>
+
+  </div>
+</div>
+
+Variabili usate
+{{nome}}
+{{telefono}}
+{{email}}
+{{tipo_progetto}}
+{{messaggio}}
+
+🔹 C. TEMPLATE 2 – AUTO-REPLY CLIENTE
+Nome template
+
+👉 tre_g_autoreply
+
+Subject
+Abbiamo ricevuto la tua richiesta – TRE G
+
+Contenuto HTML
+<div style="font-family: Montserrat, Arial, sans-serif; background:#0b0b0b; color:#f5f5f5; padding:24px;">
+  <div style="max-width:640px; margin:auto; background:#111; border-radius:16px; padding:24px; border:1px solid rgba(255,255,255,0.08);">
+
+    <h2 style="margin:0 0 12px; color:#a1887f; letter-spacing:0.12em; text-transform:uppercase;">
+      Grazie per averci contattato
+    </h2>
+
+    <p style="font-size:14px; color:#ccc;">
+      Ciao <strong>{{nome}}</strong>,<br><br>
+      abbiamo ricevuto correttamente la tua richiesta di informazioni.
+    </p>
+
+    <div style="margin:20px 0; padding:16px; background:#161616; border-radius:12px;">
+      <p style="margin:0 0 6px; color:#a1887f;">Riepilogo richiesta</p>
+      <p style="margin:0; font-size:14px;">
+        <strong>Tipo lavoro:</strong> {{tipo_progetto}}<br>
+        <strong>Telefono:</strong> {{telefono}}
+      </p>
+    </div>
+
+    <p style="font-size:14px; color:#ccc;">
+      Ti ricontatteremo al più presto per una consulenza dedicata.
+    </p>
+
+    <p style="margin-top:20px; font-size:14px;">
+      <strong>TRE G – Falegnameria Artigianale</strong><br>
+      Via Ludovico Muratori 11, Milano<br>
+      📞 338 413 8898
+    </p>
+
+    <p style="margin-top:24px; font-size:12px; color:#888;">
+      Questa è una risposta automatica, non rispondere a questa email.
+    </p>
+
+  </div>
+</div>
+
+🔹 D. DESTINATARI (IMPORTANTISSIMO)
+
+Nel template Auto-reply:
+
+To Email → {{email}}
+
+Nel template Richiesta info:
+
+To Email → la tua email aziendale
+
+3️⃣ CODICE JS DA METTERE IN VS CODE
+1️⃣ Import EmailJS (prima di </body>)
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("YOUR_PUBLIC_KEY");
+</script>
+
+
+👉 YOUR_PUBLIC_KEY lo trovi in:
+EmailJS → Account → API Keys
+
+2️⃣ JS PER INVIO DOPPIO (INFO + AUTO-REPLY)
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const data = {
+    nome: form.nome.value,
+    telefono: form.telefono.value,
+    email: form.email.value,
+    tipo_progetto: form["tipo-progetto"].value,
+    messaggio: form.messaggio.value
+  };
+
+  // 1️⃣ invio email a TRE G
+  emailjs.send(
+    "service_treg_mail",
+    "tre_g_richiesta_info",
+    data
+  );
+
+  // 2️⃣ auto-reply cliente
+  emailjs.send(
+    "service_treg_mail",
+    "tre_g_autoreply",
+    data
+  ).then(() => {
+    alert("Richiesta inviata correttamente. Ti ricontatteremo presto.");
+    form.reset();
+  }).catch(() => {
+    alert("Errore nell'invio. Riprova più tardi.");
+  });
+});
+
+4️⃣ PUOI USARE EMAILJS ANCHE PER ALTRI SITI?
+
+✅ SÌ
+
+stesso service_id
+
+template diversi per ogni sito
+Esempio:
+
+tre_g_richiesta_info
+mf_painting_richiesta
+axes_richiesta
+
+5️⃣ RISULTATO FINALE
+
+✔️ Email elegante e coerente con il sito
+✔️ Cliente rassicurato con risposta automatica
+✔️ Zero backend
+✔️ GitHub Pages compatibile
+✔️ Scalabile per altri siti
+
+Se vuoi, nel prossimo messaggio posso:
+
+aggiungere loader + feedback grafico
+
+bloccare invii multipli
+
+validazione avanzata
+
+invio WhatsApp automatico dopo l’email
+
+Dimmi tu 🔥
