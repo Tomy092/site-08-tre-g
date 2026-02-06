@@ -295,13 +295,13 @@ header {
     display: flex;
   }
 
-  .navbar {
-    padding: 12px 20px;
-    height: 80px;
+   :root {
+    --navbar-height: 70px; /* prima 80px */
   }
 
-  :root {
-    --navbar-height: 80px;
+  .navbar {
+    padding: 10px 18px;
+    height: var(--navbar-height);
   }
 
   .logo-img {
