@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restauro e ristrutturazione | TRE G</title>
+    <meta
+      name="description"
+      content="Restauro di porte, persiane, finestre e mobili in legno. Recupero estetico e funzionale nel rispetto del carattere originale."
+    />
+    <!-- FAVICON -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Apple / iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+    <!-- Optional (Chrome / Android) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img
+            src="immagini/loghi/simbolo-logo-nobg-(3).webp"
+            alt="TRE G simbolo"
+            class="logo-symbol"
+          />
+          <img
+            src="immagini/loghi/scritta-logo-nobg-(3).webp"
+            alt="TRE G"
+            class="logo-wordmark"
+          />
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </div>
+
+        <ul id="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#servizi">Servizi</a></li>
+          <li><a href="index.html#galleria">Galleria</a></li>
+          <li><a href="index.html#contatti">Contatti</a></li>
+          <li>
+            <button
+              class="btn-nav"
+              onclick="location.href = 'index.html#consulenza'"
+            >
+              Prenota consulenza
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="service-page">
+      <!-- breadcrumb -->
+      <p class="section-subtitle" style="margin-bottom: 1rem">
+        <a
+          href="index.html#servizi"
+          style="color: inherit; text-decoration: underline"
+        >
+          Servizi
+        </a>
+        <span style="opacity: 0.7"> / Restauro e ristrutturazione</span>
+      </p>
+
+      <!-- TITOLO + INTRO -->
+      <h1>Restauro e ristrutturazione</h1>
+      <span class="service-intro">
+        Interveniamo su porte, persiane, finestre e mobili in legno già
+        esistenti, ripristinando e valorizzando materiali e dettagli originali.
+      </span>
+
+      <section class="service-layout">
+        <!-- COLONNA SINISTRA -->
+        <div class="service-left">
+          <div class="service-hero">
+            <ul class="service-list">
+              <li>
+                <strong>Analisi e diagnosi</strong> – Analizziamo lo stato del
+                legno, le giunzioni e la ferramenta, valutiamo il tipo di
+                intervento più adatto e procediamo con ripristini mirati.
+              </li>
+
+              <div class="service-tags">
+                <span class="service-tag">Valutazione danni</span>
+                <span class="service-tag">Ferramenta</span>
+                <span class="service-tag">Trattamenti</span>
+              </div>
+
+              <li>
+                <strong>Ripristino e rinforzo</strong> – Ripariamo parti
+                ammalorate, rinforziamo strutture e telai, sostituiamo elementi
+                compromessi mantenendo coerenza estetica e funzionale.
+              </li>
+
+              <div class="service-tags">
+                <span class="service-tag">Riparazioni mirate</span>
+                <span class="service-tag">Incastro e precisione</span>
+                <span class="service-tag">Durata nel tempo</span>
+              </div>
+
+              <li>
+                <strong>Finitura e protezione</strong> – Carteggiatura,
+                preparazione, finiture protettive e rinnovamento estetico.
+                Possiamo uniformare colori e proteggere per ambienti
+                interni/esterni.
+              </li>
+
+              <div class="service-tags">
+                <span class="service-tag">Verniciature</span>
+                <span class="service-tag">Oli / impregnanti</span>
+                <span class="service-tag">Protezione esterni</span>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COLONNA DESTRA -->
+        <div class="service-right">
+          <h2 class="service-right-title">Ambiti principali</h2>
+          <p class="section-subtitle" style="margin-bottom: 1rem">
+            Alcuni esempi di realizzazioni tipiche.
+          </p>
+
+          <div class="service-vertical-card">
+            <h3>Porte interne</h3>
+            <p>
+              Ripristino pannelli, cornici, cerniere e chiusure. Recupero
+              estetico e funzionale.
+            </p>
+          </div>
+
+          <div class="service-vertical-card">
+            <h3>Persiane e scuri</h3>
+            <p>
+              Interventi su stecche, telai e ferramenta con finiture adatte
+              all’esterno.
+            </p>
+          </div>
+
+          <div class="service-vertical-card">
+            <h3>Finestre in legno</h3>
+            <p>
+              Manutenzione e recupero di telai, battute e componenti per
+              migliorare tenuta e resa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FULL WIDTH -->
+      <section class="service-cta">
+        <div class="service-cta-inner">
+          <h3>Vuoi un preventivo per un lavoro su misura?</h3>
+          <p>
+            Raccontaci cosa vuoi realizzare e in che ambiente: ti ricontatteremo
+            per una consulenza.
+          </p>
+
+          <div class="cta-buttons">
+            <a class="btn-primary" href="index.html#consulenza">
+              Prenota una consulenza
+            </a>
+            <a class="btn-secondary" href="index.html#contatti">
+              Vai ai contatti
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>
+          © Falegnameria TRE G di Genuario Mario. Tutti i diritti riservati.
+        </span>
+        <span>Legno, esperienza e progetti su misura dal 1976.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

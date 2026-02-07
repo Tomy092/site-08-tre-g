@@ -563,9 +563,13 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
+  align-items: stretch; /* 🔥 fondamentale */
 }
 
 .service-card {
+   height: 100%;          /* 🔥 ripristina altezza uniforme */
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     135deg,
     #151515,
@@ -602,6 +606,7 @@ section {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.6rem;
+  flex-grow: 1; /* 🔥 questo è il trucco */
 }
 
 .service-tags {
@@ -609,6 +614,7 @@ section {
   flex-wrap: wrap;
   gap: 0.35rem;
   font-size: 0.7rem;
+  margin-top: 0.8rem;
 }
 
 .service-tag {
@@ -1293,4 +1299,227 @@ footer {
   box-shadow:
     0 18px 42px rgba(0, 0, 0, 0.85),
     0 0 26px rgba(34, 110, 90, 0.15);
+}
+
+/* ===========================
+   SERVICE PAGE – BACKGROUND
+   =========================== */
+
+.service-page {
+  position: relative;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.20) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.85) 100%
+    ),
+    url("immagini/background/artigiano-a-lavoro.webp")
+      center / cover no-repeat;
+  padding: 3.5rem 1.5rem 0;
+}
+
+/* ===========================
+   LAYOUT
+   =========================== */
+
+.service-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.6rem;
+}
+
+/* ===========================
+   TITOLI (IDENTICI A INDEX)
+   =========================== */
+
+.service-page h1 {
+  /* stesso comportamento del titolo hero */
+  font-size: clamp(2rem, 3vw + 1rem, 3.1rem);
+  font-weight: 700;
+  color: var(--green); /* identico allo span hero */
+  margin-bottom: 0.5rem;
+}
+
+.service-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 64rem;
+  margin-bottom: 2rem;
+}
+
+/* ===========================
+   COLONNA SINISTRA
+   =========================== */
+
+.service-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-hero {
+  background: rgba(15, 15, 15, 0.9);
+    border-radius: 0; /* ← angoli netti */
+  padding: 1.4rem 1.4rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-list {
+  list-style: none;
+  display: grid;
+  gap: 1.4rem;
+}
+
+/* TESTI = service-desc di index */
+.service-list li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.service-list strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* TAG = service-tag di index */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.service-tag {
+  padding: 0.2rem 0.6rem;
+    border-radius: 0; /* ← angoli netti */
+  font-size: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--accent);
+  background: rgba(18, 18, 18, 0.8);
+}
+
+/* ===========================
+   COLONNA DESTRA
+   =========================== */
+
+.service-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.service-right-title {
+  font-size: 1.1rem; /* identico service-title */
+ color: var(--accent);
+}
+
+.service-vertical-card {
+  background: linear-gradient(135deg, #151515, #0f0f0f);
+  padding: 1.2rem 1.2rem 1.1rem;
+    border-radius: 0; /* ← angoli netti */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.service-vertical-card h3 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.service-vertical-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   CTA FULL WIDTH (INDEX STYLE)
+   =========================== */
+
+.service-cta {
+  margin-top: 3.5rem;
+  padding: 3.5rem 1.5rem;
+  background: #070707;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.service-cta-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #111111;
+    border-radius: 0; /* ← angoli netti */
+  padding: 1.4rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-cta-inner h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.service-cta-inner p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* ===========================
+   TABLET
+   =========================== */
+
+@media (max-width: 900px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   MOBILE
+   =========================== */
+
+@media (max-width: 600px) {
+  .service-page {
+    padding-top: 2.6rem;
+  }
+
+  .service-intro {
+    font-size: 0.9rem;
+  }
+
+  .service-hero {
+    padding: 1.2rem;
+  }
+
+  .service-cta-inner {
+    padding: 1.2rem;
+  }
+}
+
+
+/* ===========================
+   LINK CARD SERVIZI
+   =========================== */
+.service-link {
+  display: block;              /* tutta la card cliccabile */
+  text-decoration: none;       /* niente sottolineatura */
+  color: inherit;              /* niente blu */
+  height: 100%;          /* 🔥 chiave */
+}
+
+.service-link:focus {
+  outline: none;
+}
+
+/* hover coerente: si anima la card */
+.service-link:hover .service-card {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.9);
+  border-color: rgba(34, 110, 90, 0.35);
 }
